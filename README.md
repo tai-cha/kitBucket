@@ -1,24 +1,10 @@
-# README
+## About KitBucket
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### overview
+このアプリケーションは[kit](https://github.com/mtsgi/kit)用アプリケーションをzip形式でアップロードし、アプリのオンライン配信に即時対応させることができるアプリケーションです。
 
-Things you may want to cover:
+zipファイルをアップロードすると、define.jsonを解析し、自動でアプリの登録・保存を行います。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### versions
+Ruby 2.6.1p33
+Rails 5.1.7

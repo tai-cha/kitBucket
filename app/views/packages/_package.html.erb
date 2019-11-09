@@ -1,0 +1,13 @@
+<% if pkg.present? %>
+  <div class="package">
+    <p>id: <%= pkg.package_id %></p>
+    <p>name: <%= pkg.name %></p>
+    <p>author: <%= pkg.author %></p>
+    <h4>登録済みバージョン</h4>
+    <ul>
+      <% pkg.version.all.each do |version| %>
+        <li><%= version.name %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

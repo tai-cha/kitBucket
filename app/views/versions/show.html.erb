@@ -1,2 +1,3 @@
-<h1>Versions#show</h1>
-<p>Find me in app/views/versions/show.html.erb</p>
+<h2><%= @app.package_id %> <%= @version.name %></h2>
+<%= text_area_tag :define, @version.define_url, readonly: true, onclick:"this.select()", class:%i[textbox -large] %><br />
+<%= link_to "define.jsonを開く", @version.define_url, class:%i[kit-button-alt] %>

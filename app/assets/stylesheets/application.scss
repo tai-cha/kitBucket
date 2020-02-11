@@ -10,6 +10,34 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require ./kitstrap/kitstrap
+ *= require ./kitstrap/kitstrap-font
+ *= require_directory .
  *= require_self
  */
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+  background-color: dodgerblue;
+  color: white;
+
+  .title {
+    font-size: 200%;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.4));
+  }
+
+  box-shadow: 0px -25px 3rem 20px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  margin-top: auto;
+}

@@ -1,0 +1,4 @@
+<% @packages.each  do |pkg| %>
+  <%= render 'package_summary', pkg: pkg %>
+<% end %>
+<%= link_to 'アプリを登録する', new_app_path, class:%i[kit-button-alt] %>

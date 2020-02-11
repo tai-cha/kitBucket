@@ -1,0 +1,5 @@
+<div class="kit-container">
+  <% version.each do |v| %>
+    <span class="kit-box"><%= link_to v.name, app_version_path(app_app_id: v.app.package_id, name: v.name), class:%i[kit-hl-alt]%></span>
+  <% end %>
+</div>

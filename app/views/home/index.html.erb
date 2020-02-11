@@ -1,0 +1,41 @@
+<h2>kitBucketへようこそ！</h2>
+<div>
+  <h3>kitBucket (α)とは</h3>
+  <p>
+    kitBucketはkitアプリケーションをzip形式でアップロードし共有することができるサービスです。
+  </p>
+  <h4>できること</h4>
+  <ul>
+    <li>kitアプリケーションをアップロードすること</li>
+    <li>アップロードしたkitアプリケーションをkitで読み込むこと</li>
+  </ul>
+  <h4>まだできないこと</h4>
+  <ul>
+    <li>
+      ユーザー登録
+      <ul>
+        <li>お気に入りアプリにスターを付ける</li>
+        <li>プロフィールの設定</li>
+        <li>アップロードしたアプリの管理</li>
+      </ul>
+    </li>
+    <li>アプリの削除</li>
+  </ul>
+  <h4>免責事項</h4>
+  <p>
+    本アプリはテストリリースのα版なため、予告せずに公開を中止する場合があります<br />
+    アップロードされたデータも予期せずに失われる可能性があるため、ご注意ください。
+  </p>
+</div>
+<div>
+  <h3>最近追加されたバージョン</h3>
+  <div class="kit-container">
+  <% @recent_versions.each do |v| %>
+    <div class="kit-box">
+      <%= link_to v.app.package_id, app_path(app_id: v.app.package_id), class:%i[kit-hl-alt m-l] %>
+      <%= link_to v.name, app_version_path(app_app_id: v.app.package_id, name: v.name), class:%i[kit-button-alt] %>
+    </div>
+  <% end %>
+  </div>
+  <p><%= link_to "アプリ一覧へ", apps_path, class:%i[kit-hl-alt] %></p>
+</div>

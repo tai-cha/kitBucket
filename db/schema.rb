@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191108125546) do
+ActiveRecord::Schema.define(version: 20191112081710) do
 
-  create_table "packages", force: :cascade do |t|
+  create_table "apps", force: :cascade do |t|
     t.string "package_id"
     t.string "name"
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["package_id"], name: "index_packages_on_package_id", unique: true
+    t.index ["package_id"], name: "index_apps_on_package_id", unique: true
   end
 
   create_table "versions", force: :cascade do |t|
-    t.integer "package_id"
+    t.integer "app_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["package_id", "name"], name: "index_versions_on_package_id_and_name", unique: true
+    t.index ["app_id", "name"], name: "index_versions_on_app_id_and_name", unique: true
   end
 
 end

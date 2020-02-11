@@ -1,0 +1,5 @@
+<ul>
+  <% version.each do |v| %>
+    <li><%= link_to v.name, app_version_path(app_app_id: v.app.package_id, name: v.name), class:%i[kit-hl] %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,13 @@
+<% if pkg.present? %>
+  <div class="m-l kit-container">
+    <span class="kit-box">id: <%= pkg.package_id %></span>
+    <span class="kit-box"><%= link_to pkg.name, app_path(app_id: pkg.package_id), class: %i[kit-hl-alt] %> by <%= pkg.author %></span>
+    <span class="kit-box">
+      <h4>
+        最新バージョン:
+        <%= link_to pkg.version.first.name, app_version_path(app_app_id: pkg.package_id, name:pkg.version.first.name), class: %i[kit-hl-alt] %>
+      </h4>
+      <%= link_to "全てのバージョンを見る", app_path(app_id: pkg.package_id), class: %i[kit-hl-alt]%>
+    </span>
+  </div>
+<% end %>

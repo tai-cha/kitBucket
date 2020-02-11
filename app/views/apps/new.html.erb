@@ -1,0 +1,7 @@
+<%= form_with model:@package, remote:true do |f|%>
+  <div class="kit-formgroup">
+    <%= f.label :file, 'クリックしてファイルを選択', for: "fileSelector" %>
+    <%= f.file_field :file, required: true, id: "fileSelector" %>
+    <%= f.submit "送る", class: %i[kit-button] %>
+  </div>
+<% end %>

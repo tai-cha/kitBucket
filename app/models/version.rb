@@ -35,18 +35,15 @@ class Version < ApplicationRecord
     "development/archives/#{self.app.package_id}_#{self.name}.zip"
   end
 
-  def send_file_to_s3(s3_client, file, fpath)
+  def send_file_to_s3(s3_client, file, file_path)
     options = {
         bucket: ENV["S3_BUCKET"],
         body: file,
-        key: fpath
+        key: file_path
     }
+    options[:content_type] = "application/json" if file_path =~ /\.json/
 
-    s3_client.put_object(
-        bucket: ENV["S3_BUCKET"],
-        body: file,
-        key: fpath
-    )
+    s3_client.put_object(options)
   end
 
   def s3_root

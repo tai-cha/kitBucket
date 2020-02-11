@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c12cea7-e825-4875-9105-950a82f97a00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/apps/_package_info.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/apps/_package_summary.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/versions/_boxed_list.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/versions/_list.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/versions/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kitBucket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kitBucket.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/apps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/packages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/apps.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/versions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/versions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/packages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/apps_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/versions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/versions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/packages_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/apps_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/package.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/app.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/version.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/packages/_package.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/packages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/apps/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/packages/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/apps/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/packages/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/apps/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/versions/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/versions/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/packages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/apps.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +188,7 @@
       <workItem from="1573193493637" duration="15031000" />
       <workItem from="1573545466234" duration="3346000" />
       <workItem from="1575872037173" duration="18000" />
-      <workItem from="1581344872967" duration="18677000" />
+      <workItem from="1581344872967" duration="18992000" />
     </task>
     <servers />
   </component>
@@ -223,30 +196,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1581360931289">
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1581418564636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581360931289" />
-    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1581360931288">
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581418564636" />
+    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1581418564635">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581360931288" />
-    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1581360931287">
+    <state width="1398" height="204" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581418564635" />
+    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1581418564634">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581360931287" />
-    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1581360931288">
+    <state width="1398" height="204" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581418564634" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1581418564636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="204" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581360931288" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581418564636" />
     <state x="332" y="191" width="776" height="518" key="find.popup" timestamp="1581345452799">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="332" y="191" width="776" height="518" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1581345452799" />
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1581357425073">
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1581418564659">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1581357425073" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1581418564659" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1581416684445">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

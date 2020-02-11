@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c12cea7-e825-4875-9105-950a82f97a00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kitBucket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kitBucket.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/apps/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/apps/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +67,7 @@
       <command value="rails db:migrate" />
       <command value="rails g controller" />
       <command value="bundle install" />
+      <command value="bundle install --without production" />
     </option>
   </component>
   <component name="RunManager" selected="Rails.Development: kitBucket">
@@ -188,7 +187,7 @@
       <workItem from="1573193493637" duration="15031000" />
       <workItem from="1573545466234" duration="3346000" />
       <workItem from="1575872037173" duration="18000" />
-      <workItem from="1581344872967" duration="18992000" />
+      <workItem from="1581344872967" duration="19774000" />
     </task>
     <servers />
   </component>
@@ -220,9 +219,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1581418564659" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1581416684445">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1581419331789">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1581416684445" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1581419331789" />
   </component>
 </project>

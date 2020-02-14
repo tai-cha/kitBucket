@@ -47,4 +47,42 @@ header {
 
 footer {
   margin-top: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  .main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  body{
+    line-height: 2;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  nav.topics > a::after {
+    border-width: 22px 14px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 }

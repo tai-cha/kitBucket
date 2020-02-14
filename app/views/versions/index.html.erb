@@ -1,2 +1,9 @@
+<nav class="topics">
+  <%= link_to 'トップ', root_path %>
+  <%= link_to 'アプリ一覧', apps_path %>
+  <%= link_to @app.package_id %>
+  <%= link_to 'バージョン一覧', app_versions_path %>
+</nav>
+
 <h2><%= @app.name %>のバージョン一覧</h2>
 <%= render partial:"list", locals:{version: @app.version} %>

@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
+
+  get '*path', to: 'application#render_404'
 end

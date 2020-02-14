@@ -61,7 +61,7 @@ body {
 nav.topics {
   margin: 2em 0 1em 0;
   padding: 0.5em 0;
-  a {
+  > a {
     position: relative;
     display: inline-block;
     background-color: lightskyblue;
@@ -97,4 +97,30 @@ nav.topics {
 footer {
   margin-top: auto;
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body{
+    line-height: 2;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .main {
+    width: 85%;
+  }
+
+  nav.topics > a::after {
+    border-width: 18px 14px;
+  }
 }

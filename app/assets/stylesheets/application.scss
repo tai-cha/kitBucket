@@ -105,7 +105,17 @@ footer {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  .main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 896px) {
   body{
     line-height: 2;
   }
@@ -116,12 +126,8 @@ footer {
     font-size: 1.6rem;
   }
 
-  .main {
-    width: 85%;
-  }
-
   nav.topics > a::after {
-    border-width: 18px 14px;
+    border-width: 22px 14px;
   }
 
   .logo {

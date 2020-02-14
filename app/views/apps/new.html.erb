@@ -1,3 +1,9 @@
+<nav class="topics">
+  <%= link_to 'トップ', root_path %>
+  <%= link_to 'アプリ一覧', apps_path %>
+  <%= link_to '新規追加', new_app_path %>
+</nav>
+
 <%= form_with model:@package, remote:false do |f|%>
   <div class="kit-formgroup">
     <%= f.label :file, 'クリックしてファイルを選択', for: "fileSelector" %>

@@ -1,3 +1,8 @@
+<nav class="topics">
+  <%= link_to 'トップ', root_path %>
+  <%= link_to 'アプリ一覧', apps_path %>
+</nav>
+
 <% @packages.each  do |pkg| %>
   <%= render 'package_summary', pkg: pkg %>
 <% end %>

@@ -1,1 +1,7 @@
+<nav class="topics">
+  <%= link_to 'トップ', root_path %>
+  <%= link_to 'アプリ一覧', apps_path %>
+  <%= link_to @package.package_id %>
+</nav>
+
 <%= render 'package_info', pkg: @package %>

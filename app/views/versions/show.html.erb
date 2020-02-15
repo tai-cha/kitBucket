@@ -6,5 +6,6 @@
 </nav>
 
 <h2><%= @app.package_id %> <%= @version.name %></h2>
-<%= text_area_tag :define, @version.define_url, readonly: true, onclick:"this.select()", class:%i[textbox -large kit-fit] %><br />
-<%= link_to "define.jsonを開く", @version.define_url, class:%i[kit-button-alt] %>
+<%= label_tag :define, 'define.jsonのパス', class: %w[m-t-m] %>
+<%= text_area_tag :define, @version.define_url, readonly: true, onclick:"this.select()", class:%w[textbox -large kit-fit m-t-m] %><br />
+<%= link_to "define.jsonを開く", @version.define_url, class:%w[kit-button-alt m-t-l m-b-l] %>

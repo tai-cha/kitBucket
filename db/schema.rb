@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200214150253) do
+ActiveRecord::Schema.define(version: 20200215083821) do
 
   create_table "apps", force: :cascade do |t|
     t.string "package_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20200214150253) do
     t.text "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "remember_digest"
   end
 
   create_table "versions", force: :cascade do |t|

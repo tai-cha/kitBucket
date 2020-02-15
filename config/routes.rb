@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   get '/sign_up', to: 'users#new'
-  get 'login', to: 'sessions#create'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
 
   resources :users, only: %i[show create], param: :screen_name do

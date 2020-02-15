@@ -1,2 +1,6 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<% if @user.present? %>
+  <h2><%= @user.screen_name %><%= 'あなたです' if @user == current_user %></h2>
+  <%= @user.pretty_inspect %>
+<% else %>
+  <h2>指定されたユーザー(<%= params[:screen_name] %>)は存在しません。</h2>
+<% end %>

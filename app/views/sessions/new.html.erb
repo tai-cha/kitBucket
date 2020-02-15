@@ -1,0 +1,9 @@
+<h2>ログイン</h2>
+<%= form_with url: login_path, scope: :session, remote: false do |f| %>
+  <%= f.label :screen_name, class: %w[kit-left] %> <%= f.text_field :screen_name, class: %w[textbox]%> <br />
+  <%= f.label :password, class: %w[kit-left] %><%= f.password_field :password, class: %w[textbox] %> <br />
+  <%= label_tag '', class: %w[kit-toggle] do %>
+    <%= check_box_tag :remember_me, 0, false, id: 'session_remember_me'%>ログインを記録する<%= label_tag 'session[remember_me]', '' %>
+  <% end %>
+  <%= f.submit 'ログイン', class: %w[kit-button kit-font-m] %>
+<% end %>

@@ -112,6 +112,13 @@ footer {
 }
 
 @media screen and (max-width: 896px) {
+
+  header {
+    .title {
+      font-size: 150%;
+    }
+  }
+
   body {
     line-height: 1.3em;
   }

@@ -3,28 +3,28 @@
   <head>
     <title>kitBucket (α)</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header class="p-l kit-flex">
-    <%= link_to image_tag(path_to_image('logo.svg'), class:%i[logo]) + 'kitBucket (α)', root_path, class: %i[title kit-hl-alt m-l-l] %>
-    <nav class="kit-flex kit-flex-middle m-r-m">
-      <%= link_to "アプリを登録する", new_app_path, class:%i[kit-hl-alt m-l-m] %>
-      <%= link_to "アプリ一覧", apps_path, class: %i[kit-hl-alt m-l-m] %>
-    </nav>
-  </header>
   <body>
-    <% flash.each do |message_type, message| %>
-      <div class="kit-notice -<%= message_type %>">
-        <%= message %>
-      </div>
-    <% end %>
-    <div class="main p-l">
+    <header class="p-m kit-flex">
+      <%= link_to image_tag(path_to_image('logo.svg'), class: %i[logo]) + 'kitBucket (α)', root_path, class: %i[title kit-hl-alt m-l-l] %>
+      <nav class="kit-flex kit-flex-middle">
+        <%= link_to "アプリを登録する", new_app_path, class: %i[kit-hl-alt m-l-m p] %>
+        <%= link_to "アプリ一覧", apps_path, class: %i[kit-hl-alt m-l-m m-r-m p] %>
+      </nav>
+    </header>
+    <div class="main">
+      <% flash.each do |message_type, message| %>
+        <div class="kit-notice -<%= message_type %>">
+          <%= message %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
+    <footer>
+      <%= debug(params) if Rails.env.development? %>
+    </footer>
   </body>
-  <footer>
-    <%= debug(params) if Rails.env.development? %>
-  </footer>
 </html>

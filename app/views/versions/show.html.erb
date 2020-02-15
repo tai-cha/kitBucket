@@ -1,3 +1,11 @@
+<nav class="topics">
+  <%= link_to 'トップ', root_path %>
+  <%= link_to 'アプリ一覧', apps_path %>
+  <%= link_to @app.package_id %>
+  <%= link_to @version.name, app_version_path(app_app_id: @app, version_name: @version.name) %>
+</nav>
+
 <h2><%= @app.package_id %> <%= @version.name %></h2>
-<%= text_area_tag :define, @version.define_url, readonly: true, onclick:"this.select()", class:%i[textbox -large] %><br />
-<%= link_to "define.jsonを開く", @version.define_url, class:%i[kit-button-alt] %>
+<%= label_tag :define, 'define.jsonのパス', class: %w[m-t-m] %>
+<%= text_area_tag :define, @version.define_url, readonly: true, onclick:"this.select()", class:%w[textbox -large kit-fit m-t-m] %><br />
+<%= link_to "define.jsonを開く", @version.define_url, class:%w[kit-button-alt m-t-l m-b-l] %>

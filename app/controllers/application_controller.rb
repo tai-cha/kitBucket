@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
   end
 
   def render_404
-    render template: 'errors/404', status: 404, layout: 'application', content_type: 'text/html'
+    render template: 'errors/404', status: 404, layout: 'application', content_type: 'text/html' if request.format == :html
   end
 
   def render_500
-    render template: 'errors/500', status: 500, layout: 'application', content_type: 'text/html'
+    render template: 'errors/500', status: 500, layout: 'application', content_type: 'text/html' if request.format == :html
   end
 end

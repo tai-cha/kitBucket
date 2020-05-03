@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace 'api' do
+    namespace 'v1' do
+      resources :apps, only: [:index, :show]
+    end
+  end
+
   resources :apps, only: %i[index show new create], param: :app_id do
     resources :versions, only: %i[show destroy], param: :name, constraints: {name: /[^\/]+/ } do
       get :define

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  include SessionsHelper
 
   unless Rails.env.development?
     rescue_from ActiveRecord::RecordNotFound, with: :render_404

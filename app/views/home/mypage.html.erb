@@ -1,4 +1,4 @@
-<h2><%= @user.name %>さんのマイページ</h2>
+<h2><%= @user.name || @user.screen_name %>さんのマイページ</h2>
 
 <h3>kptトークン登録</h3>
 <%= form_with url: mypage_path, scope: :kpt, local: true do |f| %>

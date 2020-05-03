@@ -1,0 +1,8 @@
+<h2><%= @user.name %>さんのマイページ</h2>
+
+<h3>kptトークン登録</h3>
+<%= form_with url: mypage_path, scope: :kpt, local: true do |f| %>
+  <%= f.label 'トークン', :token %>
+  <%= f.text_field :token, value: @user.kpt_token, class: %i[textbox large] %>
+  <%= f.submit "送信する", class: %i[kit-button kit-font-m] %>
+<% end %>

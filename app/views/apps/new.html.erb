@@ -15,6 +15,6 @@
       <%= check_box_tag :kpt, 0, false, id: 'app_kpt' %>アプリをkptに登録する<%= label_tag 'app[kpt]', '' %>
     <% end %>
   <% else %>
-    <p>kptに登録するにはまず<%= link_to mypage_path, 'マイページ', class: %i[kit-hl] %>でトークンを登録して下さい。</p>
+    <p>kptに登録するにはまず<%= link_to 'マイページ', mypage_path, class: %i[kit-hl] %>でトークンを登録して下さい。</p>
   <% end %>
 <% end %>

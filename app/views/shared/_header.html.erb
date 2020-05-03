@@ -5,7 +5,7 @@
     <%= link_to "アプリ一覧", apps_path, class: %i[kit-hl-alt m-l-m m-r-m] %>
     <% if logged_in? %>
       <ul class="dropdown-menu-wrapper m-t-0 m-b-0">
-        <li><%= link_to current_user.name, user_path(current_user.screen_name), class: %i[kit-hl-alt m-l-m m-r-m] %></li>
+        <li><%= link_to "#{current_user.name || current_user.screen_name}", user_path(current_user.screen_name), class: %i[kit-hl-alt m-l-m m-r-m] %></li>
         <li>
           <ul class="dropdown-menu kit-shadow-7">
             <li><%= link_to "マイページ", mypage_path, class: %i[kit-hl m-t-s m-b-s] %></li>

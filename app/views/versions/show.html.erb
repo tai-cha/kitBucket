@@ -1,7 +1,7 @@
 <nav class="topics">
   <%= link_to 'トップ', root_path %>
   <%= link_to 'アプリ一覧', apps_path %>
-  <%= link_to @app.package_id %>
+  <%= link_to @app.package_id, app_path(@app.package_id) %>
   <%= link_to @version.name, app_version_path(app_app_id: @app, version_name: @version.name) %>
 </nav>
 

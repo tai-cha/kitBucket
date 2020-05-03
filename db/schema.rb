@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200215083821) do
+ActiveRecord::Schema.define(version: 20200502175306) do
 
   create_table "apps", force: :cascade do |t|
     t.string "package_id"
@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 20200215083821) do
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["package_id"], name: "index_apps_on_package_id", unique: true
+    t.index ["user_id"], name: "index_apps_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,6 +31,7 @@ ActiveRecord::Schema.define(version: 20200215083821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "remember_digest"
+    t.string "kpt_token"
   end
 
   create_table "versions", force: :cascade do |t|

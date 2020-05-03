@@ -15,8 +15,12 @@ class Version < ApplicationRecord
     end
   end
 
+  def file_dir_url
+    s3_root + file_dir_path
+  end
+
   def define_url
-    s3_root + file_dir_path + 'define.json'
+    file_dir_url + 'define.json'
   end
   alias :file :define_url
 

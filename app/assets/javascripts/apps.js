@@ -3,4 +3,5 @@
 
 $(document).on('change', 'input[type="file"]', function(e){
     $('label[for="fileSelector"]').text(e.target.files[0].name);
+    $('input[type="submit"].-disabled').removeClass('-disabled');
 });

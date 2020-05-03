@@ -8,6 +8,7 @@ class AppsController < ApplicationController
   end
 
   def new
+    redirect_to login_path unless logged_in?
     @package = App.new
   end
 
@@ -24,19 +25,41 @@ class AppsController < ApplicationController
     begin
       Zip::File.open(params[:app][:file].path) do |zip|
         appdata = JSON.parse(zip.read("define.json")).with_indifferent_access
+        logger.debug appdata
         @package = App.find_or_initialize_by(package_id: appdata[:id])
         @package.name = appdata[:name]
         @package.author = appdata[:author]
-        unless @package.version.find_by(name: appdata[:version]).blank?
+        @package.user = current_user
+        unless @package.versions.find_by(name: appdata[:version]).blank?
           flash[:red] = "すでに#{appdata[:id]} #{appdata[:version]}は存在しています。"
           redirect_to new_app_path
           return
         end
-        @version = @package.version.new(name: appdata[:version])
+        @version = @package.versions.new(name: appdata[:version])
         @version.unzip_and_send_file_to_aws(params[:app][:file])
-        @version.save
       end
-       redirect_to apps_path if @package.save
+      if @package.save
+        @version.save
+        flash[:green] = "アプリをアップロードしました。"
+        if params[:kpt]
+         unless current_user&.kpt_token.present?
+           flash[:red] = "kptトークンが登録されていません。"
+           return render 'new'
+         end
+         unless Kpt::Registerer.app_registered?(@package&.package_id)
+           Kpt::Registerer.register_app(current_user.kpt_token, @package.name, @package.package_id)
+         end
+         if Kpt::Registerer.register_version(current_user.kpt_token, @package.package_id, @version.name, @version.file_dir_url)
+           flash[:green] = "アプリをアップロードしkptに登録しました。"
+         else
+           flash[:red] = "kptへのバージョン登録ができませんでした。手動でのバージョン追加をお試し下さい。"
+         end
+        end
+        redirect_to apps_path
+      else
+        flash.now[:red] = "アプリの登録に失敗しました"
+        render 'new'
+      end
     rescue Zip::Error
       flash[:red] = "Zipファイルを正しく読み込めませんでした。\nファイル形式が正しく、破損していないことを確認してください。"
       redirect_to new_app_path

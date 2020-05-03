@@ -14,12 +14,12 @@ kit-button, .kit-button, .kit-toggle {
 
 /* Pointer style */
 
-.kit-toggle input+label, kit-btn, .btn, kit-hl, .kit-hyperlink, kit-hl-alt, .kit-hl-alt, .kit-button-alt, kit-button-alt, kit-navbar-alt kit-navitem, kit-navbar-alt .kit-navitem, .kit-navbar-alt kit-navitem, .kit-navbar-alt .kit-navitem {
+.kit-toggle input+label, kit-btn, .btn, kit-hl, .kit-hyperlink, kit-hl-alt, .kit-hl-alt, .kit-button-alt, kit-button-alt, kit-navbar-alt kit-navitem, kit-navbar-alt .kit-navitem, .kit-navbar-alt kit-navitem, .kit-navbar-alt .kit-navitem, .kit-input-file, .kit-input-file input[type="file"] {
     cursor: url(./cursor-2.png), pointer;
 }
 
 /* Text style */
 
-.textbox {
+.textbox, .kit-textbox {
     cursor: url(./cursor-3.png), text;
 }

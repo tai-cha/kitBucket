@@ -3,11 +3,18 @@
   <%= link_to 'アプリ一覧', apps_path %>
   <%= link_to '新規追加', new_app_path %>
 </nav>
-
-<%= form_with model:@package, remote:false do |f|%>
+<h2 class="m-b-xl">アプリの新規追加</h2>
+<%= form_with model: @package, local: false do |f|%>
   <div class="kit-formgroup">
     <%= f.label :file, 'クリックしてファイルを選択', for: "fileSelector" %>
     <%= f.file_field :file, required: true, id: "fileSelector" %>
-    <%= f.submit "送る", class: %i[kit-button] %>
+    <%= f.submit "送る", class: %i[kit-button -disabled kit-font-m] %>
   </div>
+  <% if current_user.kpt_token.present? %>
+    <%= label_tag '', class: %w[kit-toggle kit-width-50 m-t-xl p-l-0] do %>
+      <%= check_box_tag :kpt, 0, false, id: 'app_kpt' %>アプリをkptに登録する<%= label_tag 'app[kpt]', '' %>
+    <% end %>
+  <% else %>
+    <p>kptに登録するにはまず<%= link_to mypage_path, 'マイページ', class: %i[kit-hl] %>でトークンを登録して下さい。</p>
+  <% end %>
 <% end %>

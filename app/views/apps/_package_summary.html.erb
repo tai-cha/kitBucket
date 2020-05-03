@@ -5,7 +5,7 @@
     <span class="kit-box">
       <h4>
         最新バージョン:
-        <%= link_to pkg.version.first.name, app_version_path(app_app_id: pkg.package_id, name:pkg.version.first.name), class: %i[kit-hl-alt] %>
+        <%= link_to pkg.versions.first.name, app_version_path(app_app_id: pkg.package_id, name: pkg.versions.first.name), class: %i[kit-hl-alt] %>
       </h4>
       <%= link_to "全てのバージョンを見る", app_path(app_id: pkg.package_id), class: %i[kit-hl-alt]%>
     </span>

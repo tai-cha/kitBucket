@@ -1,6 +1,13 @@
 <% if @user.present? %>
-  <h2><%= @user.screen_name %><%= 'あなたです' if @user == current_user %></h2>
-  <%= @user.pretty_inspect %>
+  <h2><%= @user.screen_name %><%= tag.span('あなたです', class: %i[kit-badge dodgerblue kit-font-m m-l]) if @user == current_user %></h2>
+  <h3><%= @user.name %>がアップロードしたアプリ一覧</h3>
+  <% if @user.apps.length > 0 %>
+    <% @user.apps.each do |app| %>
+      <% render 'apps/package_summary', pkg: app %>
+    <% end %>
+  <% else %>
+    まだアプリをアップロードしたことがありません
+  <% end %>
 <% else %>
   <h2>指定されたユーザー(<%= params[:screen_name] %>)は存在しません。</h2>
 <% end %>

@@ -1,3 +1,4 @@
 class App < ApplicationRecord
-  has_many :version, dependent: :destroy
+  belongs_to :user
+  has_many :versions, dependent: :destroy
 end

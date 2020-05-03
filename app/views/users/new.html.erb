@@ -1,6 +1,7 @@
 <h2>アカウント作成</h2>
 <%= form_with model: @user, remote: false do |f| %>
-  <%= f.label :screen_name, class: %w[kit-left] %> <%= f.text_field :screen_name, class: %w[textbox]%> <br />
-  <%= f.label :password, class: %w[kit-left] %><%= f.password_field :password, class: %w[textbox] %> <br />
+  <%= f.label :screen_name, class: %w[kit-left kit-width-30] %> <%= f.text_field :screen_name, class: %w[textbox]%> <br />
+  <%= f.label :password, class: %w[kit-left kit-width-30] %><%= f.password_field :password, class: %w[textbox] %> <br />
+  <%= f.label :password_confirmation, class: %w[kit-left kit-width-30] %><%= f.password_field :password_confirmation, class: %w[textbox] %> <br />
   <%= f.submit 'アカウント作成', class: %w[kit-button kit-font-m] %>
 <% end %>

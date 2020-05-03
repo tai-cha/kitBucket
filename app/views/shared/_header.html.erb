@@ -1,0 +1,21 @@
+<header class="kit-flex">
+  <%= link_to image_tag(path_to_image('logo.svg'), class: %i[logo]) + 'kitBucket (α)', root_path, class: %i[title kit-hl-alt m-l-l] %>
+  <nav class="kit-flex kit-flex-middle">
+    <%= link_to "アプリを登録する", new_app_path, class: %i[kit-hl-alt m-l-m] if logged_in? %>
+    <%= link_to "アプリ一覧", apps_path, class: %i[kit-hl-alt m-l-m m-r-m] %>
+    <% if logged_in? %>
+      <ul class="dropdown-menu-wrapper m-t-0 m-b-0">
+        <li><%= link_to current_user.name, user_path(current_user.screen_name), class: %i[kit-hl-alt m-l-m m-r-m] %></li>
+        <li>
+          <ul class="dropdown-menu kit-shadow-7">
+            <li><%= link_to "マイページ", mypage_path, class: %i[kit-hl m-t-s m-b-s] %></li>
+            <li><%= link_to "ログアウト", logout_path, class: %i[kit-hl m-t-s m-b-s] %></li>
+          </ul>
+        </li>
+      </ul>
+    <% else %>
+      <%= link_to "アカウント作成", sign_up_path, class: %i[kit-hl-alt m-l-m m-r-m] %>
+      <%= link_to "ログイン", login_path, class: %i[kit-hl-alt m-l-m m-r-m p] %>
+    <% end %>
+  </nav>
+</header>

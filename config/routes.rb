@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   get '/sign_up', to: 'users#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
+  get 'mypage', to: 'home#mypage'
+  post 'mypage', to: 'home#set_token'
 
   resources :users, only: %i[show create], param: :screen_name do
     resources :apps, only: %i[index]
@@ -24,5 +20,5 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get '*path', to: 'application#render_404'
+  get '*path', to: 'application#render_404' unless Rails.env.development?
 end

@@ -17,7 +17,7 @@ class AppsController < ApplicationController
     require 'active_support/core_ext/array'
 
     @package = nil
-    unless params[:app][:file].content_type == 'application/zip'
+    unless %w[application/zip application/x-zip-compressed].include?(params[:app][:file].content_type)
       flash[:red] = "zipファイル以外は読み込めません。(アップロードされたファイル: #{params[:app][:file].original_filename})"
       redirect_to new_app_path
       return

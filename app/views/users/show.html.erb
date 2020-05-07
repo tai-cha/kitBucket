@@ -3,7 +3,7 @@
   <h3><%= @user.name %>がアップロードしたアプリ一覧</h3>
   <% if @user.apps.length > 0 %>
     <% @user.apps.each do |app| %>
-      <% render 'apps/package_summary', pkg: app %>
+      <%= render 'apps/package_summary', pkg: app %>
     <% end %>
   <% else %>
     まだアプリをアップロードしたことがありません
